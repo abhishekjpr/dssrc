@@ -1,4 +1,4 @@
-package com.abhishek.questions;
+package com.abhishek.questions.demo;
 
 public class HelloWorld {
     public static void main(String[] args) {
