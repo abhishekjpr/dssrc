@@ -1,0 +1,4 @@
+out/
+src/com/abhishek/questions/*.class
+.idea/
+dssrc.iml

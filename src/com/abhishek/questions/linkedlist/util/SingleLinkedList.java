@@ -34,12 +34,46 @@ public class SingleLinkedList {
         return root;
     }
 
-    public void insertNumber(Node root, int data) {
-
+    public Node insertFirst(Node root, int data) {
+        Node temp = root;
+        Node node = new Node(data);
+        root = node;
+        root.next = temp;
+        return root;
     }
 
-    public void deleteNumber(Node root, int data) {
+    public Node insertLast(Node root, int data) {
+        Node temp = root;
+        if(root == null) {
+            root = new Node(data);
+            return root;
+        }
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = new Node(data);
+        return root;
+    }
 
+    public Node insertAtPosition(Node root, int data, int position) {
+        Node curr = root, nextNode = root;
+        if(size(root) <= position){
+            System.out.println("Invalid position..");
+            return root;
+        }
+        if(position == 0){
+            root = new Node(data);
+            root.next = curr;
+            return root;
+        }
+        while (position != 0){
+            curr = curr.next;
+            --position;
+        }
+        nextNode = curr.next;
+        curr.next = new Node(data);
+        curr.next.next = nextNode;
+        return root;
     }
 
     public void printLinkedList(Node root) {
@@ -70,8 +104,8 @@ public class SingleLinkedList {
         Node temp = root;
         int size = 0;
         while (temp != null){
-            ++size;
             temp = temp.next;
+            ++size;
         }
         return size;
     }

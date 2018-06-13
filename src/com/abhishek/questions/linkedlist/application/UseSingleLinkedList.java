@@ -9,13 +9,17 @@ import java.util.logging.Logger;
 public class UseSingleLinkedList {
 
     public static void main(String[] args) {
-        log.info("Executing Main()");
         SingleLinkedList singleLinkedList = new SingleLinkedList();
         Node root;
         System.out.println("Creating linked list..");
         root = singleLinkedList.createLinkedList();
         singleLinkedList.printLinkedList(root);
-        log.info("Exiting from Main()");
+        root = singleLinkedList.insertFirst(root, 62);
+        singleLinkedList.printLinkedList(root);
+        root = singleLinkedList.insertLast(root, 120);
+        singleLinkedList.printLinkedList(root);
+        root = singleLinkedList.insertAtPosition(root, 79, 8);
+        singleLinkedList.printLinkedList(root);
     }
 
     private final static Logger log = Logger.getLogger(UseSingleLinkedList.class.getSimpleName());
