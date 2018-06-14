@@ -110,5 +110,14 @@ public class SingleLinkedList {
         return size;
     }
 
+    public Node createLoopInLinkedList(Node root) {
+        Node temp = root;
+        while(temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = root.next.next;
+        return root;
+    }
+
     private final Logger log = Logger.getLogger(SingleLinkedList.class.getSimpleName());
 }

@@ -1,8 +1,8 @@
 package com.abhishek.questions.linkedlist.util;
 
 public class Node {
-    Integer data;
-    Node next;
+    public Integer data;
+    public Node next;
 
     public Node() {
         data = 0;
@@ -11,5 +11,9 @@ public class Node {
 
     public Node(Integer data) {
         this.data = data;
+    }
+
+    public String toString(){
+        return data + "->" + next;
     }
 }
