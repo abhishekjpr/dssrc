@@ -12,8 +12,4 @@ public class Node {
     public Node(Integer data) {
         this.data = data;
     }
-
-    public String toString(){
-        return data + "->" + next;
-    }
 }

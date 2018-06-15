@@ -15,7 +15,7 @@ public class SingleLinkedList {
         int numberOfNodes = 0;
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            numberOfNodes = random.nextInt(15) + 1;
+            numberOfNodes = random.nextInt(15) + 10;
             log.info("[createLinkedList] Generating "+numberOfNodes+" numbers..");
             for(int i = 0; i < numberOfNodes; ++i) {
                 int data = random.nextInt(100) + 1;
@@ -108,15 +108,6 @@ public class SingleLinkedList {
             ++size;
         }
         return size;
-    }
-
-    public Node createLoopInLinkedList(Node root) {
-        Node temp = root;
-        while(temp.next != null) {
-            temp = temp.next;
-        }
-        temp.next = root.next.next;
-        return root;
     }
 
     private final Logger log = Logger.getLogger(SingleLinkedList.class.getSimpleName());
