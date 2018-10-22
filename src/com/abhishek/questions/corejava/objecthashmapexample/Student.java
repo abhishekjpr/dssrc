@@ -27,10 +27,16 @@ public class Student {
     }
 
     public boolean equals(Student s1){
+        System.out.println("equals");
         if(this == s1)
             return true;
         if(!(s1 instanceof Student))
             return false;
         return ((this.getId() == s1.getId()) && this.getName().equals(s1.getName()));
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getId();
     }
 }
