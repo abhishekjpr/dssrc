@@ -23,6 +23,5 @@ public class Application {
 
         PrintPathEqualToSumOfGivenNumber printPathEqualToSumOfGivenNumber = new PrintPathEqualToSumOfGivenNumber();
         printPathEqualToSumOfGivenNumber.printRootToLeaf(root, 35);
-        System.out.println("hello");
     }
 }
