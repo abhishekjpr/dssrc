@@ -1,4 +1,4 @@
-package com.abhishek.questions.corejava;
+package com.abhishek.questions.trees.problems;
 
 public class VerifyPreorderSequenceInBinarySearchTree {
 

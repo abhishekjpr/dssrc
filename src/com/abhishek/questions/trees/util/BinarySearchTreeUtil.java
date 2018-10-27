@@ -9,7 +9,7 @@ public class BinarySearchTreeUtil {
         Random r = new Random();
         for(int i = 0; i < n; ++i){
             Node temp = root;
-            int data = r.nextInt(15);
+            int data = r.nextInt(135);
             System.out.println(data);
             Node node = new Node();
             node.data = data;
@@ -58,5 +58,4 @@ public class BinarySearchTreeUtil {
         System.out.print(root.data + " ");
         printInorder(root.right);
     }
-
 }
