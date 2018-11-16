@@ -18,14 +18,13 @@ Subarrays are : {2, 3, 4} and {4, 5}
 
 */
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class IndexWhereLeftAndRightSumAreEqual {
 
     public static void main(String[] args) {
         Random r = new Random();
-        int[] array = new int[]{1, 4, 2, 2, 15, 11, 5, 8, 9, 17, 1};
+        int[] array = new int[]{1, 2, 3, -5, -6, 17, -2, 2};
         printArray(array);
         System.out.println("\n"+indexOfElement(array));
     }

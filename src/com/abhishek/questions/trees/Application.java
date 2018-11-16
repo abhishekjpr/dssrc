@@ -1,9 +1,6 @@
 package com.abhishek.questions.trees;
 
-import com.abhishek.questions.trees.problems.DiagonalTraversalOfBT;
-import com.abhishek.questions.trees.problems.DiameterOfBinaryTree;
-import com.abhishek.questions.trees.problems.HeightOfBinaryTree;
-import com.abhishek.questions.trees.problems.VerticalTraversalOfBinaryTree;
+import com.abhishek.questions.trees.problems.*;
 import com.abhishek.questions.trees.util.BinarySearchTreeUtil;
 import com.abhishek.questions.trees.util.Node;
 
@@ -11,7 +8,7 @@ public class Application {
 
     public static void main(String[] args) {
 
-        int n = 15;
+        int n = 25;
 
         BinarySearchTreeUtil binarySearchTreeUtil = new BinarySearchTreeUtil();
         Node root = binarySearchTreeUtil.createBST(n);
@@ -21,7 +18,8 @@ public class Application {
         binarySearchTreeUtil.printPostorder(root);
         System.out.println("\nInorder traversal is : ");
         binarySearchTreeUtil.printInorder(root);
-
+        System.out.println("\nLevel order traversal is : ");
+        binarySearchTreeUtil.levelOrder(root);
 
         HeightOfBinaryTree heightOfBinaryTree = new HeightOfBinaryTree();
         System.out.println("\nHeight of binary search tree : " + heightOfBinaryTree.heightOfBT(root));
@@ -36,5 +34,22 @@ public class Application {
         DiagonalTraversalOfBT diagonalTraversalOfBT = new DiagonalTraversalOfBT();
         System.out.println("Diagonal traversal of BT : ");
         diagonalTraversalOfBT.diagonalPrint(root);
+
+        ZigZagTraversalOfBT zigZagTraversalOfBT = new ZigZagTraversalOfBT();
+        System.out.println("Zig Zag traversal of BT : ");
+        zigZagTraversalOfBT.zigZagTraversal(root);
+
+        Node root2 = binarySearchTreeUtil.createBST(n);
+
+        System.out.println("\nInorder traversal is : ");
+        binarySearchTreeUtil.printInorder(root2);
+
+        CommonNodesInTwoBST commonNodesInTwoBST = new CommonNodesInTwoBST();
+        commonNodesInTwoBST.commonNodesInTwoBST(root, root2);
+
+        System.out.println("\nInorder Successor is : ");
+
+        InorderSuccessorOfNode inorderSuccessorOfNode = new InorderSuccessorOfNode();
+        System.out.println(inorderSuccessorOfNode.inorderSuccessor(122, root2).data);
     }
 }

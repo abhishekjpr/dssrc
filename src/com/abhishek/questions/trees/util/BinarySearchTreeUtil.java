@@ -1,5 +1,7 @@
 package com.abhishek.questions.trees.util;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
 
 public class BinarySearchTreeUtil {
@@ -57,5 +59,23 @@ public class BinarySearchTreeUtil {
         printInorder(root.left);
         System.out.print(root.data + " ");
         printInorder(root.right);
+    }
+
+    public void levelOrder(Node root){
+        if(root == null){
+            return;
+        }
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            Node temp = queue.remove();
+            System.out.print(temp.data+" ");
+            if(temp.left != null){
+                queue.add(temp.left);
+            }
+            if(temp.right != null){
+                queue.add(temp.right);
+            }
+        }
     }
 }
